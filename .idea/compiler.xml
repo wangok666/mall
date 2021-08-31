@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mall-model" />
+        <module name="mall-service" />
+        <module name="mall-service-impl" />
+        <module name="mall-buyer-provider" />
+        <module name="mall-dao" />
+        <module name="mall-buyer-api" />
+        <module name="mall-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mall-buyer-api" target="6" />
+      <module name="mall-buyer-provider" target="1.5" />
+      <module name="mall-common" target="7" />
+      <module name="mall-dao" target="1.5" />
+      <module name="mall-model" target="1.5" />
+      <module name="mall-parent" target="1.5" />
+      <module name="mall-service" target="1.5" />
+      <module name="mall-service-impl" target="6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
