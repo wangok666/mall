@@ -21,10 +21,10 @@
       <module name="mall-buyer-provider" target="1.5" />
       <module name="mall-common" target="7" />
       <module name="mall-dao" target="1.5" />
-      <module name="mall-model" target="1.5" />
+      <module name="mall-model" target="7" />
       <module name="mall-parent" target="1.5" />
       <module name="mall-service" target="1.5" />
-      <module name="mall-service-impl" target="6" />
+      <module name="mall-service-impl" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
