@@ -31,5 +31,10 @@ public class ArticleBuyerController {
         return Result.success(buyerArticleService.articlePage(articleSearchParams));
     }
 
-
+    @ApiOperation(value = "通过id获取文章")
+    @ApiImplicitParam(name = "id", value = "文章ID", required = true, paramType = "path")
+    @GetMapping(value = "/get/{id}")
+    public Result<ArticleVO> get(@PathVariable("id") Long id) {
+        return Result.success(buyerArticleService.customGet(id));
+    }
 }

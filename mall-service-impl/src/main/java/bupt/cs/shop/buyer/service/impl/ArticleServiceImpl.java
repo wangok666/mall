@@ -57,6 +57,11 @@ public class ArticleServiceImpl implements ArticleService {
         return articleVOPage;
     }
 
+    @Override
+    public ArticleVO findArticleById(Long id) {
+        Article article = this.articleMapper.selectById(id);
+        return copy(article);
+    }
 
 
     public ArticleVO copy(Article article){

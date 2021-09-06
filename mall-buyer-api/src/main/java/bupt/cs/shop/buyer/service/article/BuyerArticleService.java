@@ -16,4 +16,8 @@ public class BuyerArticleService {
     public Page<ArticleVO> articlePage(ArticleSearchParams articleSearchParams) {
         return articleService.articlePage(articleSearchParams);
     }
+
+    public ArticleVO customGet(Long id) {
+        return articleService.findArticleById(id);
+    }
 }

@@ -7,6 +7,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 public interface ArticleService {
 
 
-
+    //常见问题
     Page<ArticleVO> articlePage(ArticleSearchParams articleSearchParams);
+
+    //文章详情
+    ArticleVO findArticleById(Long id);
 }
