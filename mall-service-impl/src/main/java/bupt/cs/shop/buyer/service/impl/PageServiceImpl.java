@@ -4,7 +4,7 @@ import bupt.cs.shop.buyer.enums.ClientType;
 import bupt.cs.shop.buyer.enums.OpenStatusEnum;
 import bupt.cs.shop.buyer.goods.pojo.pages.PageTemplate;
 import bupt.cs.shop.buyer.goods.pojo.pages.TemplateDetail;
-import bupt.cs.shop.buyer.goods.vo.pages.*;
+import bupt.cs.shop.buyer.vo.goods.pages.*;
 import bupt.cs.shop.buyer.mapper.PageTemplateMapper;
 import bupt.cs.shop.buyer.mapper.TemplateDetailMapper;
 import bupt.cs.shop.buyer.service.PageService;

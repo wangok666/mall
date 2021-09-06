@@ -1,6 +1,6 @@
 package bupt.cs.shop.buyer.enums;
 
-public enum StatusEnum {
+public enum  StatusEnum {
 
     NORMAL(0,"正常"),
     DELETE(1,"删除");

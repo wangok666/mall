@@ -1,7 +1,7 @@
 package bupt.cs.shop.buyer.service;
 
 
-import bupt.cs.shop.buyer.goods.vo.CategoryVO;
+import bupt.cs.shop.buyer.vo.CategoryVO;
 
 import java.util.List;
 
