@@ -1,4 +1,4 @@
-package bupt.cs.shop.buyer.goods.pojo;
+package bupt.cs.shop.buyer.pojo.article;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

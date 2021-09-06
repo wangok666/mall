@@ -1,11 +1,12 @@
 package bupt.cs.shop.buyer.service.impl;
 
-import bupt.cs.shop.buyer.goods.pojo.Article;
+import bupt.cs.shop.buyer.mapper.ArticleCategoryMapper;
+import bupt.cs.shop.buyer.pojo.article.Article;
 import bupt.cs.shop.buyer.mapper.ArticleMapper;
-import bupt.cs.shop.buyer.mapper.TestMapper;
 import bupt.cs.shop.buyer.params.ArticleSearchParams;
-import bupt.cs.shop.buyer.pojo.Test;
+import bupt.cs.shop.buyer.pojo.article.ArticleCategory;
 import bupt.cs.shop.buyer.service.ArticleService;
+import bupt.cs.shop.buyer.vo.article.ArticleCategoryVO;
 import bupt.cs.shop.buyer.vo.article.ArticleVO;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -28,6 +29,8 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
 
+    @Autowired
+    private ArticleCategoryMapper articleCategoryMapper;
 
     @Override
     public Page<ArticleVO> articlePage(ArticleSearchParams articleSearchParams) {
@@ -63,7 +66,35 @@ public class ArticleServiceImpl implements ArticleService {
         return copy(article);
     }
 
+    @Override
+    public List<ArticleCategoryVO> findAllArticleCategory() {
+        LambdaQueryWrapper<ArticleCategory> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(ArticleCategory::getDeleteFlag,false);
+        List<ArticleCategory> articleCategories = articleCategoryMapper.selectList(queryWrapper);
+        List<ArticleCategoryVO> articleCategoryVOs = copyCategoryList(articleCategories);
+        List<ArticleCategoryVO> articleCategoryVOList = new ArrayList<>();
+        for (ArticleCategoryVO articleCategoryVO : articleCategoryVOs) {
+            if (articleCategoryVO.getLevel() == 0){
+                addCategoryChild(articleCategoryVO,articleCategoryVOs);
+                articleCategoryVOList.add(articleCategoryVO);
+            }
+        }
+        return articleCategoryVOList;
+    }
 
+    private void addCategoryChild(ArticleCategoryVO articleCategoryVO, List<ArticleCategoryVO> articleCategoryVOs) {
+        List<ArticleCategoryVO> articleCategoryVOList = new ArrayList<>();
+        for (ArticleCategoryVO categoryVO : articleCategoryVOs) {
+            if (categoryVO.getParentId().equals(articleCategoryVO.getId())){
+                addCategoryChild(categoryVO,articleCategoryVOs);
+                articleCategoryVOList.add(categoryVO);
+            }
+        }
+        articleCategoryVO.setChildren(articleCategoryVOList);
+    }
+
+
+    //从pojo到vo的复制
     public ArticleVO copy(Article article){
         if (article == null){
             return null;
@@ -79,6 +110,29 @@ public class ArticleServiceImpl implements ArticleService {
 
         for (Article article : articleList) {
             articleVOList.add(copy(article));
+        }
+        return articleVOList;
+    }
+
+
+    //递归设置孩子节点
+    public ArticleCategoryVO copyCategory(ArticleCategory article){
+        if (article == null){
+            return null;
+        }
+        ArticleCategoryVO articleVO = new ArticleCategoryVO();
+
+        BeanUtils.copyProperties(article,articleVO);
+        articleVO.setId(article.getId().toString());
+        articleVO.setParentId(article.getParentId().toString());
+        return articleVO;
+    }
+
+    public  List<ArticleCategoryVO> copyCategoryList(List<ArticleCategory> articleList){
+        List<ArticleCategoryVO> articleVOList = new ArrayList<>();
+
+        for (ArticleCategory article : articleList) {
+            articleVOList.add(copyCategory(article));
         }
         return articleVOList;
     }

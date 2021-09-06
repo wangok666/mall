@@ -1,8 +1,11 @@
 package bupt.cs.shop.buyer.service;
 
 import bupt.cs.shop.buyer.params.ArticleSearchParams;
+import bupt.cs.shop.buyer.vo.article.ArticleCategoryVO;
 import bupt.cs.shop.buyer.vo.article.ArticleVO;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+
+import java.util.List;
 
 public interface ArticleService {
 
@@ -12,4 +15,7 @@ public interface ArticleService {
 
     //文章详情
     ArticleVO findArticleById(Long id);
+
+    //文章分类列表
+    List<ArticleCategoryVO> findAllArticleCategory();
 }
