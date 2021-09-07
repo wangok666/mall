@@ -1,14 +1,14 @@
 package bupt.cs.shop.buyer.service.impl;
 
-import bupt.cs.shop.buyer.enums.ClientType;
-import bupt.cs.shop.buyer.enums.OpenStatusEnum;
-import bupt.cs.shop.buyer.goods.pojo.pages.PageTemplate;
-import bupt.cs.shop.buyer.goods.pojo.pages.TemplateDetail;
-import bupt.cs.shop.buyer.vo.goods.pages.*;
+import bupt.cs.shop.common.enums.ClientType;
+import bupt.cs.shop.common.enums.OpenStatusEnum;
+import bupt.cs.shop.buyer.pojo.page.PageTemplate;
+import bupt.cs.shop.buyer.pojo.page.TemplateDetail;
+import bupt.cs.shop.common.vo.goods.pages.*;
 import bupt.cs.shop.buyer.mapper.PageTemplateMapper;
 import bupt.cs.shop.buyer.mapper.TemplateDetailMapper;
 import bupt.cs.shop.buyer.service.PageService;
-import bupt.cs.shop.common.model.BusinessCodeEnum;
+import bupt.cs.shop.common.enums.BusinessCodeEnum;
 import bupt.cs.shop.common.vo.Result;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

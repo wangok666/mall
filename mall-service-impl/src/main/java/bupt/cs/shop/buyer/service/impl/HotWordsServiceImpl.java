@@ -1,6 +1,6 @@
 package bupt.cs.shop.buyer.service.impl;
 
-import bupt.cs.shop.buyer.goods.pojo.GoodsHotWords;
+import bupt.cs.shop.buyer.pojo.goods.GoodsHotWords;
 import bupt.cs.shop.buyer.mapper.GoodsHotWordsMapper;
 import bupt.cs.shop.buyer.service.HotWordsService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;

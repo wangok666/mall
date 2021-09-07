@@ -1,7 +1,7 @@
 package bupt.cs.shop.buyer.service.goods;
 
 
-import bupt.cs.shop.buyer.vo.CategoryVO;
+import bupt.cs.shop.common.vo.CategoryVO;
 import bupt.cs.shop.buyer.service.CategoryService;
 import bupt.cs.shop.common.vo.Result;
 import lombok.extern.slf4j.Slf4j;

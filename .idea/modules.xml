@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/mall-parent.iml" filepath="$PROJECT_DIR$/mall-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-service/mall-service.iml" filepath="$PROJECT_DIR$/mall-service/mall-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl.iml" filepath="$PROJECT_DIR$/mall-service-impl/mall-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-sso/mall-sso.iml" filepath="$PROJECT_DIR$/mall-sso/mall-sso.iml" />
     </modules>
   </component>
 </project>

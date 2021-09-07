@@ -2,8 +2,8 @@ package bupt.cs.shop.buyer.controller.article;
 
 import bupt.cs.shop.buyer.params.ArticleSearchParams;
 import bupt.cs.shop.buyer.service.article.BuyerArticleService;
-import bupt.cs.shop.buyer.vo.article.ArticleCategoryVO;
-import bupt.cs.shop.buyer.vo.article.ArticleVO;
+import bupt.cs.shop.common.vo.article.ArticleCategoryVO;
+import bupt.cs.shop.common.vo.article.ArticleVO;
 import bupt.cs.shop.common.vo.Result;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 

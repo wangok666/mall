@@ -2,8 +2,8 @@ package bupt.cs.shop.buyer.service.article;
 
 import bupt.cs.shop.buyer.params.ArticleSearchParams;
 import bupt.cs.shop.buyer.service.ArticleService;
-import bupt.cs.shop.buyer.vo.article.ArticleCategoryVO;
-import bupt.cs.shop.buyer.vo.article.ArticleVO;
+import bupt.cs.shop.common.vo.article.ArticleCategoryVO;
+import bupt.cs.shop.common.vo.article.ArticleVO;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;

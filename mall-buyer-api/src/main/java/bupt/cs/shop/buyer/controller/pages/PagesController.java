@@ -1,6 +1,6 @@
 package bupt.cs.shop.buyer.controller.pages;
 
-import bupt.cs.shop.buyer.enums.PageType;
+import bupt.cs.shop.common.enums.PageType;
 import bupt.cs.shop.buyer.service.pages.PagesService;
 import bupt.cs.shop.common.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package bupt.cs.shop.common.vo;
 
-import bupt.cs.shop.common.model.BusinessCodeEnum;
+import bupt.cs.shop.common.enums.BusinessCodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

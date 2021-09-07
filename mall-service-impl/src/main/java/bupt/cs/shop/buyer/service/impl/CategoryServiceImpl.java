@@ -1,7 +1,7 @@
 package bupt.cs.shop.buyer.service.impl;
 
-import bupt.cs.shop.buyer.goods.pojo.Category;
-import bupt.cs.shop.buyer.vo.CategoryVO;
+import bupt.cs.shop.buyer.pojo.goods.Category;
+import bupt.cs.shop.common.vo.CategoryVO;
 import bupt.cs.shop.buyer.mapper.CategoryMapper;
 import bupt.cs.shop.buyer.service.CategoryService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
